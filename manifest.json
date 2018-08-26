@@ -1,0 +1,34 @@
+{
+  "name": "Rohlikr",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension was created with the awesome extensionizr.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "page_action": {
+    "default_popup": "src/ui/index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "default_locale": "en",
+  "content_scripts": [{
+    "css": ["src/content.css"],
+    "js": ["js/jquery/jquery.js", "src/content.js"],
+    "matches": ["https://www.rohlik.cz/*"]
+  }],
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "contextMenus",
+    "cookies",
+    "fileBrowserHandler",
+    "idle",
+    "https://www.rohlik.cz/*"
+  ]
+}

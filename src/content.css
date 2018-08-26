@@ -1,0 +1,42 @@
+button.person-button {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+    padding: 4px 8px;
+    margin: 4px;
+    background: #777;
+    color: white;
+}
+
+button.person-button.checked {
+    background: orange;
+    font-weight: bold;
+}
+
+button.sum-button {
+    padding: 10px 14px;
+    margin-top: 12px;
+    font-weight: bold;
+    background: orange;
+    color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+input.number-input {
+    text-align: center;
+    width: 38px;
+    height: 25px;
+    display: inline;
+    padding: 0 4px;
+    background: #999;
+    font-size: 1em;
+    color: white;
+    margin-left: 6px;
+    margin-right: 1px;
+}
+
+span.num-input-container {
+    padding: 4px 0px 4px 8px;
+    margin: 4px;
+    background: #777;
+    color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+}
