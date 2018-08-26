@@ -12,7 +12,7 @@ const renderButtons = (captions, prod, price, count) => {
 
 const renderNumberBoxes = (captions, prod, price, count) => {
 	return wrapButtonContent(prod, price, count,
-		captions.map(x => "<span class='num-input-container'>" + x + ": <input type='number' class='number-input' name='" + x + "'/></span>").join("")
+		captions.map(x => "<span class='num-input-container'><button class='fill-all'>" + x + "</button> <input type='number' class='number-input' name='" + x + "'/></span>").join("")
 	);
 };
 
@@ -57,6 +57,22 @@ $("button.person-button").click(e => {
 
 	button.toggleClass("checked");
 	button.attr("data-check", button.hasClass("checked") ? 1 : 0);
+});
+
+$("button.fill-all").click(e => {
+	const button = $(e.target);
+	const container = button.parent();
+	const count = button.parent().parent().attr("data-count");
+
+	container.find(".number-input").val(count);
+	if (!container.hasClass("checked"))
+		container.addClass("checked");
+});
+
+$(".number-input").on("keyup", e => {
+	const container = $(e.target).parent();
+	if (!container.hasClass("checked"))
+		container.addClass("checked");
 });
 
 $("button.sum-button").click(e => {

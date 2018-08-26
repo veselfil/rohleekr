@@ -40,3 +40,13 @@ span.num-input-container {
     color: white;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
 }
+
+span.num-input-container.checked {
+    background: orange;
+}
+
+span.num-input-container .number-input.checked {
+    background: #ffc600;
+}
+
+.fill-all { background: none; }
